@@ -3,7 +3,7 @@ services:
     image: postgres
     container_name: postgres_julio
     environment:
-      POSTGRES_PASSWORD: "Postgres2024!"
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     ports:
       - "15432:5432"
     volumes:
@@ -15,8 +15,8 @@ services:
     image: dpage/pgadmin4
     container_name: pgadmin4_julio
     environment:
-      PGADMIN_DEFAULT_EMAIL: "juliocd.bernardes@gmail.com"
-      PGADMIN_DEFAULT_PASSWORD: "PgAdmin2024!"
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
     ports:
       - "16543:80"
     depends_on:
